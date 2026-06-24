@@ -1,180 +1,191 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:#e7e7e7;
-    font-family:Arial, sans-serif;
+body {
+    background: #e7e7e7; /* Оригінальний фон */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
 }
 
-.container{
-    width:95%;
-    max-width:1400px;
-    margin:15px auto;
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
 /* HEADER */
-
-header{
-    background:#e5cdbd;
-    height:80px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-    box-shadow:0 4px 8px rgba(0,0,0,.25);
+header {
+    background: #e5cdbd; /* Оригінальний колір */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
 }
 
-header h1{
-    font-size:48px;
-    font-family:cursive;
-    font-weight:400;
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.weather{
-    position:absolute;
-    right:20px;
-    display:flex;
-    align-items:center;
-    gap:10px;
+.weather {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.weather img{
-    width:50px;
+.weather img {
+    width: 45px;
+    border-radius: 50%;
 }
 
-.weather span{
-    font-size:30px;
+.weather span {
+    font-size: 24px;
+    font-weight: 600;
 }
 
 /* MAP SECTION */
-
-.map-section{
-    display:flex;
-    gap:35px;
-    margin-top:30px;
+.map-section {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
 }
 
-.tips{
-    width:280px;
+/* TIPS */
+.tips {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.tip-title{
-    border:2px solid #8a6a57;
-    background:#e5cdbd;
-    text-align:center;
-    padding:10px;
+.tip-title {
+    background: #e5cdbd; /* Оригінальний */
+    border: 2px solid #8a6a57; /* Оригінальний */
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.tip{
-    border-left:2px solid #8a6a57;
-    border-right:2px solid #8a6a57;
-    border-bottom:2px solid #8a6a57;
-    padding:10px;
-    background:#e5cdbd;
+.tip {
+    background: #e5cdbd; /* Оригінальний */
+    border: 2px solid #8a6a57; /* Оригінальний */
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.5;
+    font-size: 15px;
 }
 
-.big{
-    font-size:28px;
+.tip.big {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* MAP */
-
-.map-container{
-    flex:1;
+.map-container {
+    flex: 1;
 }
 
-.map-container h2{
-    text-align:center;
-    margin-bottom:10px;
-    font-family:cursive;
-    font-weight:400;
+.map-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 600;
 }
 
-.map-box{
-    border:3px solid black;
-    background:white;
-    height:500px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.map-box img{
-    width:90%;
-    max-height:90%;
-    object-fit:contain;
+.map-box {
+    background: white;
+    border: 3px solid #8a6a57; /* Оригінальний коричневий */
+    padding: 10px;
+    border-radius: 12px;
+    height: 500px;
 }
 
 /* DIVIDER */
-
-.divider{
-    height:20px;
-    background:#856450;
-    margin:40px 0 10px;
+.divider {
+    height: 8px;
+    background: #856450; /* Оригінальний */
+    margin: 40px auto;
+    border-radius: 4px;
+    width: 80%;
 }
 
-/* PLACES */
-
-.places{
-    background:#e5cdbd;
-    border:2px solid #8a6a57;
+/* PLACES (НИЗ СТОРІНКИ) */
+.places {
+    background: #ffffff; /* Змінено на білий за вашим бажанням */
+    border: 2px solid #8a6a57; /* Оригінальний колір рамки */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.places h2{
-    text-align:center;
-    padding:10px;
-    font-size:40px;
-    border-bottom:2px solid #8a6a57;
+.places h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    font-size: 34px;
+    font-weight: 600;
+    border-bottom: 2px solid #8a6a57;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-.card{
-    border-right:2px solid #8a6a57;
-    text-align:center;
+.card {
+    background: #ffffff; /* Картки тепер теж чисто білі */
+    border: 2px solid #8a6a57;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:last-child{
-    border-right:none;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* М'яка тінь при наведенні */
 }
 
-.card h3{
-    font-size:36px;
-    padding:10px;
-    border-bottom:2px solid #8a6a57;
+.card h3 {
+    font-size: 24px;
+    padding: 15px;
+    border-bottom: 2px solid #8a6a57;
 }
 
-.card img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    padding:15px;
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
 }
 
 /* MOBILE */
-
-@media(max-width:900px){
-
-    .map-section{
-        flex-direction:column;
+@media(max-width: 900px) {
+    .map-section {
+        flex-direction: column;
     }
 
-    .tips{
-        width:100%;
+    .tips {
+        width: 100%;
     }
 
-    .cards{
-        grid-template-columns:1fr;
+    .cards {
+        grid-template-columns: 1fr;
     }
-
-    .card{
-        border-right:none;
-        border-bottom:2px solid #8a6a57;
+    
+    .map-box {
+        height: 400px;
     }
 }
