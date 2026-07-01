@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Travel Time</h1>
+        <div class="weather">
+            <img id="weather-icon" src="weather.jpg" alt="weather">
+            <span id="weather-temp">--°</span>
+        </div>
+    </header>
+
+    <section class="tips-full-width">
+        <div id="tips-view">
+            <h2>Поради</h2>
+            <div class="tips-layout">
+                <div class="tips-container">
+                    <div class="tip">Не витрачайте усі гроші в перший день відпочинку — залиште резерв.</div>
+                    <div class="tip">Не забувайте про захист від комах та сонця.</div>
+                    <div class="tip">Не намагайтесь встигнути все — найкращі моменти часто незаплановані.</div>
+                    <div class="tip">Спробуйте місцеву їжу, навіть якщо вона здається дивною.</div>
+                    <div class="tip big">Насолоджуйтесь моментом.</div>
+                </div>
+                <div class="about-prompt" id="btn-show-about">
+                    <span>Хочете дізнатися більше про нас?</span>
+                    <span class="arrow">&rarr;</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="about-view" class="hidden">
+            <div class="about-header">
+                <div class="back-prompt" id="btn-show-tips">
+                    <span class="arrow">&larr;</span>
+                    <span>Назад до порад</span>
+                </div>
+                <h2>Про нас</h2>
+            </div>
+            <div class="about-content">
+                <p>Ми — команда з трьох підлітків, об’єднаних спільною пристрастю до технологій та любові до рідної України. Наш проєкт — це результат нашого бажання зробити мандрівки країною доступнішими, простішими та цікавішими для кожного. Ми віримо, що навіть невеликими силами можна створити інструменти, які полегшують життя сучасним дослідникам.</p>
+                
+                <h3 class="about-subtitle">Яку проблему ми вирішуємо?</h3>
+                <p class="about-text">
+                    Подорожі Україною часто супроводжуються труднощами з плануванням та вибором маршруту. Ми створили цей ресурс, щоб вирішити наступні питання:
+                </p>
+                <ul class="about-list">
+                    <li><strong>Дефіцит структурованої інформації:</strong> Ми збираємо та впорядковуємо розрізнені дані про цікаві локації, щоб ви не витрачали години на пошуки в інтернеті.</li>
+                    <li><strong>Складність логістики:</strong> Ми пропонуємо готові маршрути, де об'єкти розташовані зручно один відносно одного, що економить ваш час та паливо.</li>
+                    <li><strong>Брак ідей для відпочинку:</strong> Ми пропонуємо варіанти як для коротких прогулянок на вихідні, так і для насичених подорожей на цілий день, враховуючи потреби різних мандрівників.</li>
+                    <li><strong>Відсутність орієнтирів:</strong> Завдяки інтерактивній мапі та чітким точкам зупинок, ви завжди знаєте, що саме варто побачити у кожній конкретній точці маршруту.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="map-container">
+            <h2>Карта України</h2>
+            <div class="map-box">
+                <div id="myMap"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="places">
+        <h2>Маршрути для подорожей</h2>
+        <div class="cards">
+            
+            <div class="card route-card">
+                <h3>🏰 Золота підкова Львівщини</h3>
+                <ul class="route-points">
+                    <li>Олеський замок</li>
+                    <li>Підгорецький замок</li>
+                    <li>Золочівський замок</li>
+                </ul>
+                <a href="1/index.html" class="btn-more">Дізнатися більше</a>
+            </div>
+
+            <div class="card route-card">
+                <h3>🌄 Тустань + Сколівські Бескиди</h3>
+                <ul class="route-points">
+                    <li>Тустань</li>
+                    <li>Водоспад Кам'янка</li>
+                    <li>Журавлине озеро</li>
+                </ul>
+                <a href="2/index.html" class="btn-more">Дізнатися більше</a>
+            </div>
+
+            <div class="card route-card">
+                <h3>🏰🌅 Свірзький замок + містечка</h3>
+                <ul class="route-points">
+                    <li>Свірзький замок</li>
+                    <li>Прогулянка старим центром Бібрки</li>
+                    <li>Повернення до Львова</li>
+                </ul>
+                <a href="3/index.html" class="btn-more">Дізнатися більше</a>
+            </div>
+
+            <div class="card route-card">
+                <h3>🏞️ Карпатський день у Яремче</h3>
+                <ul class="route-points">
+                    <li>Яремче</li>
+                    <li>Водоспад Пробій</li>
+                    <li>Стежка Довбуша</li>
+                    <li>Сувенірний ринок і кухня</li>
+                </ul>
+                <a href="4/index.html" class="btn-more">Дізнатися більше</a>
+            </div>
+
+            <div class="card route-card">
+                <h3>🌊 Заліщики + Джуринський водоспад</h3>
+                <ul class="route-points">
+                    <li>Панорама Заліщиків</li>
+                    <li>Джуринський водоспад</li>
+                    <li>Червоногородський замок</li>
+                </ul>
+                <a href="5/index.html" class="btn-more">Дізнатися більше</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p class="warning-text">Наразі радимо утриматися від поїздок.</p>
+        <p class="copyright-text">&copy; 2026 Всі права захищені.</p>
+    </footer>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="map.js"></script>
+</body>
+</html>
