@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e7e7e7;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* HEADER */
+header {
+    background: #e5cdbd;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-weight: 600;
+    color: #4a3629;
+}
+
+.weather {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.weather span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a3629;
+}
+
+/* CARD DESIGN */
+.card {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.card h3 {
+    font-size: 26px;
+    color: #2c1e15;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e5cdbd;
+    padding-bottom: 10px;
+}
+
+.photopidkova {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 12px 0;
+    color: #555;
+}
+
+/* Стиль для великого блоку з плюсами */
+.card h4:nth-of-type(3) {
+    font-weight: normal;
+    font-size: 16px;
+    background: #fdfaf7;
+    border-left: 4px solid #8a6a57;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+.card h5 {
+    font-size: 16px;
+    font-style: italic;
+    color: #777;
+    margin-top: 15px;
+}
+
+.card ul {
+    margin: 15px 0 15px 20px;
+}
+
+.card ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/* КНОПКА МАРШРУТУ */
+.route-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.route-btn:hover {
+    background: #219653;
+}
+
+.route-btn:active {
+    transform: scale(0.98);
+}
+
+/* RESPONSIVE (MOBILE) */
+@media (max-width: 768px) {
+    .photopidkova {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    
+    header h1 {
+        font-size: 28px;
+    }
+    
+    .weather span {
+        font-size: 20px;
+    }
+}
