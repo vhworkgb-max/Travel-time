@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Init map
     var map = L.map('myMap').setView([49.5, 25.2], 7);
 
-    // Tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Places list
     var places = [
         { name: "Олеський замок", coords: [49.9684, 24.9008], url: "https://uk.wikipedia.org/wiki/Олеський_замок" },
         { name: "Підгорецький замок", coords: [49.9431, 24.9835], url: "https://uk.wikipedia.org/wiki/Підгорецький_замок" },
@@ -110,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Центр реабілітації бурих ведмедів", coords: [48.5572, 23.6542], url: "https://uk.wikipedia.org/wiki/Реабілітаційний_центр_бурих_ведмедів" },
         { name: "Успенський собор (Володимир)", coords: [50.8483, 24.3167], url: "https://uk.wikipedia.org/wiki/Успенський_собор_(Володимир)" }
     ];
-    // Add markers
     places.forEach(function (place) {
         var marker = L.marker(place.coords).addTo(map);
         marker.bindTooltip(place.name);
@@ -163,19 +159,16 @@ function getWeather(position) {
 // Якщо користувач заборонив доступ до локації
 function handleGeoError(error) {
     console.warn(`Помилка геолокації (${error.code}): ${error.message}`);
-    // Показуємо дефолтну погоду, наприклад для Києва (50.45, 30.52)
     setDefaultWeather();
 }
 
-// План Б: завантаження погоди за замовчуванням (наприклад, Київ)
 function setDefaultWeather() {
     const kyivLat = 50.45;
     const kyivLon = 30.52;
-    // Можна викликати ту саму функцію getWeather, але з фейковим об'єктом position:
     getWeather({ coords: { latitude: kyivLat, longitude: kyivLon } });
 }
 
-// Функція підбору іконок (Open-Meteo використовує коди WMO)
+// Функція підбору іконок
 function updateWeatherIcon(code) {
     const iconImg = document.getElementById('weather-icon');
     
