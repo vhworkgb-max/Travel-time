@@ -361,7 +361,7 @@ footer p.copyright-text {
     }
 }
 
-/* --- Нові класи для заміни inline-стилів --- */
+
 .hidden {
     display: none !important;
 }
